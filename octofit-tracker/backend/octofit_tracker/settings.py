@@ -37,7 +37,7 @@ DATABASES = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['jubilant-capybara-49q55g4q42644-8000.app.github.dev', 'localhost', '127.0.0.1']
 
 SECRET_KEY = 'your-secret-key'  # Replace 'your-secret-key' with a secure, random string
 
@@ -60,3 +60,8 @@ TEMPLATES = [
 
 # Set DEFAULT_AUTO_FIELD to address warnings about auto-created primary keys
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+# Allow insecure requests for testing purposes
+SECURE_SSL_REDIRECT = False
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
